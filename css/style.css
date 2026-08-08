@@ -1,0 +1,517 @@
+/* Общие сбросы и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff9f1c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #ff9f1c;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.btn-primary {
+    background: #ff9f1c;
+    color: #1a1a1a;
+}
+.btn-primary:hover {
+    background: #e68a00;
+    transform: scale(1.03);
+}
+.btn-secondary {
+    background: transparent;
+    color: #ff9f1c;
+    border: 2px solid #ff9f1c;
+}
+.btn-secondary:hover {
+    background: #ff9f1c;
+    color: #1a1a1a;
+    transform: scale(1.03);
+}
+
+/* ========== ШАПКА ========== */
+.header {
+    background: #0d0d0d;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(255, 159, 28, 0.2);
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.logo__img {
+    height: 40px;
+    width: auto;
+}
+.logo__text {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #ff9f1c;
+    letter-spacing: 2px;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+.nav__list a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+.nav__list a:hover {
+    color: #ff9f1c;
+}
+
+/* ========== HERO ========== */
+
+.hero__content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.hero__text {
+    flex: 1 1 400px;
+}
+.hero__title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ff9f1c;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.hero__subtitle {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+.hero__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.hero__image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+.hero__img {
+    max-width: 100%;
+    filter: drop-shadow(0 10px 30px rgba(255, 159, 28, 0.3));
+}
+
+/* ========== ГАЛЕРЕЯ ========== */
+.gallery {
+    padding: 80px 0;
+    background: #1f1f1f;
+}
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+.gallery__item {
+    background: #2a2a2a;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+.gallery__item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(255, 159, 28, 0.2);
+}
+.gallery__item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.gallery__item p {
+    padding: 15px 10px;
+    font-weight: 600;
+    color: #ddd;
+}
+
+/* ========== МЕНЮ ========== */
+.menu {
+    padding: 80px 0;
+    background: #1a1a1a;
+}
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.menu__item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #2a2a2a;
+    border-radius: 15px;
+    padding: 15px 25px;
+    transition: background 0.3s;
+}
+.menu__item:hover {
+    background: #333;
+}
+.menu__item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.menu__info {
+    flex: 1;
+}
+.menu__info h3 {
+    font-size: 1.2rem;
+    color: #ff9f1c;
+}
+.menu__info p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 5px 0 8px;
+}
+.menu__price {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #ff9f1c;
+}
+
+/* ========== ФИЛИАЛЫ (карта + время) ========== */
+.branches {
+    padding: 80px 0;
+    background: #1f1f1f;
+}
+.branches__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.branches__info {
+    flex: 1 1 300px;
+}
+.branches__info h3 {
+    font-size: 1.4rem;
+    color: #ff9f1c;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.working-hours {
+    list-style: none;
+    font-size: 1.1rem;
+}
+.working-hours li {
+    margin-bottom: 5px;
+}
+.working-hours span {
+    color: #ff9f1c;
+    font-weight: 700;
+}
+address p {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+address i {
+    color: #ff9f1c;
+    width: 20px;
+}
+.branches__info .btn {
+    margin: 10px 10px 0 0;
+}
+.branches__map {
+    flex: 2 1 400px;
+}
+.branches__map iframe {
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+/* ========== ОТЗЫВЫ ========== */
+.reviews {
+    padding: 80px 0;
+    background: #1a1a1a;
+}
+.reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.review {
+    background: #2a2a2a;
+    padding: 25px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+.review:hover {
+    transform: scale(1.02);
+}
+.review__header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.review__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff9f1c;
+}
+.review__header h4 {
+    color: #fff;
+}
+.review__stars {
+    color: #ff9f1c;
+    font-size: 0.9rem;
+}
+.review p {
+    color: #ccc;
+    font-style: italic;
+}
+
+/* ========== ФУТЕР ========== */
+.footer {
+    background: #0d0d0d;
+    padding: 30px 0;
+    border-top: 1px solid #2a2a2a;
+}
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer p {
+    color: #888;
+}
+.footer__social a {
+    color: #888;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+.footer__social a:hover {
+    color: #ff9f1c;
+}
+
+/* ========== АДАПТАЦИЯ ========== */
+@media (max-width: 992px) {
+    .hero__title {
+        font-size: 2.8rem;
+    }
+    .hero__content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero__buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0d0d0d;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+    .nav.active {
+        display: block;
+    }
+    .nav__list {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .nav__list a {
+        font-size: 1.2rem;
+    }
+    .hero__title {
+        font-size: 2.2rem;
+    }
+    .hero {
+        min-height: auto;
+        padding: 60px 0;
+    }
+    .menu__item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .menu__item img {
+        width: 120px;
+        height: 120px;
+    }
+    .branches__wrapper {
+        flex-direction: column;
+    }
+    .branches__map iframe {
+        height: 250px;
+    }
+    .footer__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer__social a {
+        margin: 0 10px;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__title {
+        font-size: 1.8rem;
+    }
+    .hero__buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .gallery__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .review {
+        padding: 20px;
+    }
+}
+/* ========== HERO с размытым фоном ========== */
+.hero {
+    position: relative;          /* чтобы overlay позиционировался относительно секции */
+    overflow: hidden;            /* чтобы размытие не вылезало за края */
+    background: #1a1a1a;         /* запасной фон, если картинка не загрузится */
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Затемнённый размытый фон */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border: 2px solid red;
+
+    background-image: url('/img/burger-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+   filter: blur(10px);
+}
+
+/* Затемнение – отдельный блок */
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* Контент – выше фона */
+.hero__content {
+    position: relative;
+    z-index: 1;
+}
+/* ========== ЛОГОТИП ПОВЕРХ ФОНА В HERO ========== */
+.hero-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2; /* выше фона и контента */
+}
+
+.hero-logo img {
+    height: 120px; /* чуть больше, чем в шапке (40px) */
+    width: auto;
+}
+
+/* На мобильных уменьшим, чтобы не мешал */
+@media (max-width: 768px) {
+    .hero-logo img {
+        height: 50px;
+    }
+}
+/* Убираем старый градиент, если он мешал */
+/* (можно оставить как запасной, но тогда background: none) */

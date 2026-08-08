@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastFood — сеть ресторанов</title>
+    <!-- Подключаем шрифты Google (например, Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Подключаем Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Наши стили -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка (навигация) -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="FastFood логотип" class="logo__img">
+                <span class="logo__text">FastFood</span>
+            </a>
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#hero">Главная</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#menu">Меню</a></li>
+                    <li><a href="#branches">Филиалы</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-logo">
+            <img src="img/logo.png" alt="FastFood">
+        </div>
+        <div class="container hero__content">
+            <div class="hero__text">
+                <h1 class="hero__title">Вкусно и быстро</h1>
+                <p class="hero__subtitle">Сеть ресторанов быстрого питания с любовью к качеству</p>
+                <div class="hero__buttons">
+                    <a href="tel:+78005553535" class="btn btn-primary">
+                        <i class="fas fa-phone-alt"></i> Позвонить
+                    </a>
+                    <a href="#branches" class="btn btn-secondary">
+                        <i class="fas fa-map-marker-alt"></i> Построить маршрут
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея популярных блюд -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Популярные блюда</h2>
+            <div class="gallery__grid">
+                <!-- Каждый элемент галереи -->
+                <div class="gallery__item">
+                    <img src="img/burger1.jpg" alt="Бургер 1">
+                    <p>Классический бургер</p>
+                </div>
+                <div class="gallery__item">
+                    <img src="img/burger2.jpg" alt="Бургер 2">
+                    <p>Бургер с двойной котлетой</p>
+                </div>
+                <div class="gallery__item">
+                    <img src="img/fries.jpg" alt="Картофель фри">
+                    <p>Картофель фри</p>
+                </div>
+                <div class="gallery__item">
+                    <img src="img/drink.jpg" alt="Напиток">
+                    <p>Освежающий напиток</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Меню с ценами -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Наше меню</h2>
+            <div class="menu__list">
+                <!-- Позиция меню -->
+                <div class="menu__item">
+                    <img src="img/burger1.jpg" alt="Гамбургер">
+                    <div class="menu__info">
+                        <h3>Гамбургер</h3>
+                        <p>Сочная говяжья котлета, сыр, овощи, соус</p>
+                        <span class="menu__price">250 ₽</span>
+                    </div>
+                </div>
+                <div class="menu__item">
+                    <img src="img/burger2.jpg" alt="Чизбургер">
+                    <div class="menu__info">
+                        <h3>Чизбургер</h3>
+                        <p>Двойная порция сыра, котлета, горчица</p>
+                        <span class="menu__price">290 ₽</span>
+                    </div>
+                </div>
+                <div class="menu__item">
+                    <img src="img/fries.jpg" alt="Картофель фри">
+                    <div class="menu__info">
+                        <h3>Картофель фри</h3>
+                        <p>Золотистая хрустящая соломка</p>
+                        <span class="menu__price">120 ₽</span>
+                    </div>
+                </div>
+                <div class="menu__item">
+                    <img src="img/drink.jpg" alt="Кола">
+                    <div class="menu__info">
+                        <h3>Напиток</h3>
+                        <p>Кола, спрайт или фанта (0,5 л)</p>
+                        <span class="menu__price">80 ₽</span>
+                    </div>
+                </div>
+                <!-- Добавьте больше позиций по желанию -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Филиалы на карте и время работы -->
+    <section id="branches" class="branches">
+        <div class="container">
+            <h2 class="section-title">Наши филиалы</h2>
+            <div class="branches__wrapper">
+                <div class="branches__info">
+                    <h3>Время работы</h3>
+                    <ul class="working-hours">
+                        <li><span>Пн–Пт:</span> 10:00 – 23:00</li>
+                        <li><span>Сб–Вс:</span> 11:00 – 22:00</li>
+                    </ul>
+                    <h3>Адреса</h3>
+                    <address>
+                        <p><i class="fas fa-map-pin"></i> ул. Ленина, 25</p>
+                        <p><i class="fas fa-map-pin"></i> пр. Победы, 12</p>
+                        <p><i class="fas fa-map-pin"></i> ул. Гагарина, 5</p>
+                    </address>
+                    <a href="tel:+78005553535" class="btn btn-primary">
+                        <i class="fas fa-phone-alt"></i> Позвонить
+                    </a>
+                    <a href="https://yandex.ru/maps" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-directions"></i> Построить маршрут
+                    </a>
+                </div>
+                <div class="branches__map">
+                    <!-- Вставка карты через iframe (Яндекс.Карты) -->
+                    <iframe 
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234567890abcdef&source=constructor" 
+                        width="100%" height="300" frameborder="0" allowfullscreen>
+                    </iframe>
+                    <!-- Для Google Maps используйте похожий iframe -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы</h2>
+            <div class="reviews__grid">
+                <div class="review">
+                    <div class="review__header">
+                        <img src="img/avatar1.jpg" alt="Аватар" class="review__avatar">
+                        <div>
+                            <h4>Анна К.</h4>
+                            <div class="review__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>«Очень вкусно! Бургеры сочные, картошка хрустящая. Доставка быстрая.»</p>
+                </div>
+                <div class="review">
+                    <div class="review__header">
+                        <img src="img/avatar2.jpg" alt="Аватар" class="review__avatar">
+                        <div>
+                            <h4>Дмитрий П.</h4>
+                            <div class="review__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>«Лучший фастфуд в городе. Регулярно заказываю здесь обед.»</p>
+                </div>
+                <div class="review">
+                    <div class="review__header">
+                        <img src="img/avatar3.jpg" alt="Аватар" class="review__avatar">
+                        <div>
+                            <h4>Елена С.</h4>
+                            <div class="review__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>«Обслуживание на высоте, всегда свежие продукты. Рекомендую!»</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>&copy; 2026 FastFood. Все права защищены.</p>
+            <div class="footer__social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем наш JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
