@@ -478,7 +478,7 @@ address i {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.75);
 }
 /* Контент – выше фона */
 .hero__content {
