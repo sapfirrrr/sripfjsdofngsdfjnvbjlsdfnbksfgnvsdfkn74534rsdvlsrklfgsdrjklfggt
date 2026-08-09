@@ -473,7 +473,7 @@ address i {
     z-index: 0;
     border: 2px solid red;
 
-    background-image: url('img/burger-bg.jpg');
+    background-image: url('../img/burger-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
