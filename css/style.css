@@ -472,21 +472,6 @@ address i {
     height: 100%;
     z-index: 0;
     border: 2px solid red;
-
-   /* background-image: url('../img/burger-bg.jpg');*/
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-   filter: blur(10px);
-}
-
-/* Затемнение – отдельный блок */
-.hero-overlay::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
 }
 
 /* Контент – выше фона */
